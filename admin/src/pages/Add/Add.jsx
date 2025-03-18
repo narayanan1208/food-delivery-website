@@ -4,7 +4,7 @@ import { assets } from "../../assets/assets";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Add = () => {
+const Add = ({ url }) => {
   const categories = [
     { key: "Salad", value: "Salad" },
     { key: "Rolls", value: "Rolls" },
@@ -15,7 +15,7 @@ const Add = () => {
     { key: "Pasta", value: "Pasta" },
     { key: "Noodles", value: "Noodles" },
   ];
-  const url = "http://localhost:4000";
+
   const [image, setImage] = useState(false);
   const [productData, setProductData] = useState({
     name: "",
